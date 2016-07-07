@@ -1,0 +1,7 @@
+/flasky/venv
+/git.txt
+/.git
+*.py[cod]
+*.so
+*.egg
+*.egg-info

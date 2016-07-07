@@ -1,0 +1,58 @@
+﻿{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Todolist{% endblock %}
+
+{% block navbar %}
+
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<h1 align="center"><table >{{ wtf.quick_form(form) }}</table></h1>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+
+{% endblock navbar %}
+
+<body>
+{% block content %}
+<div class="container">
+<div class="page-header">
+<h2 align="center">正在进行</h2>
+<ol>
+{%for ldl in name%}
+<li>
+<form method="POST">
+{{ form.hidden_tag() }}
+<p align="center">
+<input type="text" name="text"  value={{ldl}}>{{ford.boole}}{{ford.submii}}
+<p>
+</form>
+</li>
+
+{%endfor%}
+</ol>
+
+<h2 align="center">已经完成</h2>
+<ol>
+{%for bd in bod%}
+<li >
+{{ form.hidden_tag() }}
+<p align="center">
+<input type="text" name="bod" value={{bd}}><input type="checkbox" checked>{{ford.submii}}
+<p>
+</li>
+{%endfor%}
+</ol>
+</body>
+</div>
+</div>
+<from href="/clearn" method=['GET','POST']>
+<a href="{{url_for('main.clearn')}}">clearn</a>
+</from>
+{% endblock content %}
