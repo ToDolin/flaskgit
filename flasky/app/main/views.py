@@ -3,7 +3,7 @@ from flask import Flask,render_template,session,redirect,url_for,flash,request
 
 
 from forms import NameForm,submit
-from __init__ import main 
+from . import main 
 bdd=[]
 bod=[]
 
@@ -31,8 +31,12 @@ def index():
             return redirect(url_for('main.index'))
  return render_template('a.html', form=form, name=bdd,ford=ford,bod=bod)
 
+@main.route('/favicon.ico',methods=['GET','POST'])
+def favico():
+       return redirect(url_for('static',filename='favicon.ico'))
+
 @main.route('/clearn', methods=['GET', 'POST'])
 def clearn():
         
-        
-        return redirect(url_for('main.index',bdd=bdd))
+        #return redirect(url_for('static',filename='favicon.ico',_external=True))
+        return redirect(url_for('main.index'))

@@ -17,7 +17,7 @@ def create_app(config_name):
   '''mail.init_app(app)
   moment.init_app(app)
   db.init_app(app)'''
-  from main.__init__  import main as main_blueprint
+  from .main  import main as main_blueprint
   app.register_blueprint(main_blueprint)
 
 

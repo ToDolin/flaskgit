@@ -1,7 +1,18 @@
+#windows:
 /flasky/venv
 /git.txt
 /.git
+Desktop.ini
+
+#python:
 *.py[cod]
 *.so
 *.egg
 *.egg-info
+dist
+build
+
+#my config:
+db.ini
+/*.db
+
