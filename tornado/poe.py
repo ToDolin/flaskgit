@@ -1,5 +1,4 @@
 import os.path
-import flask_bootstrap
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
