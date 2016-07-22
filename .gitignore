@@ -1,5 +1,5 @@
 #windows:
-/flasky/venv
+/flasky
 /git.txt
 /.git
 Desktop.ini
@@ -12,7 +12,7 @@ Desktop.ini
 dist
 build
 
-#my config:
+#config:
 db.ini
 /*.db
 
